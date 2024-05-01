@@ -11,7 +11,7 @@ const SignUp = () => {
     const [email , setEmail] = useState('')
 
     const signUp = () =>{
-        axios.post("https://bubble-backend.onrender.com/signup" , {username , password , email}).then((result)=>{
+        axios.post("https://bubble-backend-nine.vercel.app/signup" , {username , password , email}).then((result)=>{
             navigate('/login')
         })
     }
