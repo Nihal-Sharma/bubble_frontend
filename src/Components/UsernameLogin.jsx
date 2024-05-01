@@ -32,14 +32,14 @@ const UsernameLogin = () => {
     }
 
   return (
-    <div>
+    <div className="gg">
        
       <div className="mainbox">
         <input
           placeholder="Username"
           style={{
-            height: "30px",
-            fontSize: "22px",
+            height: "3vh",
+            fontSize: "2vh",
             padding: "10px",
             borderRadius: "10px",
             width :'100%'
@@ -52,8 +52,8 @@ const UsernameLogin = () => {
           placeholder="password"
           type="password"
           style={{
-            height: "30px",
-            fontSize: "22px",
+            height: "3vh",
+            fontSize: "2vh",
             padding: "10px",
             borderRadius: "10px",
             width :'100%'
@@ -62,7 +62,7 @@ const UsernameLogin = () => {
         ></input>
 
       </div>
-      <div div className="mainbox heightt" onClick={Login} >
+      <div  className="mainbox heightt" onClick={Login} >
       <text className="login-but">Login</text></div>
       <div  className="mainbox heightt1" onClick={NewAcc} >
         <text>Create Account</text>

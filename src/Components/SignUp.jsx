@@ -18,14 +18,14 @@ const SignUp = () => {
 
     
   return (
-    <div>
+    <div className="gg">
        
     <div className="mainbox">
       <input
         placeholder="Username"
         style={{
-          height: "30px",
-          fontSize: "22px",
+          height: "3vh",
+          fontSize: "2vh",
           padding: "10px",
           borderRadius: "10px",
           width :'100%'
@@ -38,8 +38,8 @@ const SignUp = () => {
         placeholder="password"
         type="password"
         style={{
-          height: "30px",
-          fontSize: "22px",
+          height: "3vh",
+          fontSize: "2vh",
           padding: "10px",
           borderRadius: "10px",
           width :'100%'
@@ -54,8 +54,8 @@ const SignUp = () => {
         placeholder="Confirm Password"
         type="password"
         style={{
-          height: "30px",
-          fontSize: "22px",
+          height: "3vh",
+          fontSize: "2vh",
           padding: "10px",
           borderRadius: "10px",
           width :'100%'
@@ -69,8 +69,8 @@ const SignUp = () => {
         placeholder="Email"
         type="mail"
         style={{
-          height: "30px",
-          fontSize: "22px",
+          height: "3vh",
+          fontSize: "2vh",
           padding: "10px",
           borderRadius: "10px",
           width :'100%'
