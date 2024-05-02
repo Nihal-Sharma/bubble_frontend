@@ -22,8 +22,8 @@ const Navbar = () => {
     }
 
   return (
-    <div style={{ display: "flex" }}>
-      <div style={{ margin: "20px" }}>
+    <div className="navbar">
+      <div style={{ margin: "20px"  }}>
         {" "}
         <Link to={"/"}>Home</Link>
       </div>
@@ -49,6 +49,9 @@ const Navbar = () => {
           paddingTop: "5px",
           paddingBottom: "5px",
           borderRadius: "10px",
+          width :'60px',
+          textAlign :'center'
+         
         }}
         onClick={logout}
       >

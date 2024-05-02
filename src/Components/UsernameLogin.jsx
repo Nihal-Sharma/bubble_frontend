@@ -7,12 +7,14 @@ const UsernameLogin = () => {
     const navigate = useNavigate()
     const [username , setUsername] = useState('')
     const [password , setPassword] = useState('')
-
+    const api = useStore((state)=> state.apiendpoint)
     const Login = () =>{
   
         // localStorage.setItem("LOGGEDIN" ,"true")
         // navigate("/chooseservice")
-      axios.post("https://bubble-backend-nine.vercel.app/login" , {username , password}).then((result)=>{
+      
+      console.log(api.apiendpoint)
+      axios.post(`${api}/login` , {username , password}).then((result)=>{
         // localStorage.setItem("TOKEN" , res.data)
         if(result.data.username == null){
           alert("Login Denied")

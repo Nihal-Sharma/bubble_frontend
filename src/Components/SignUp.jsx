@@ -9,9 +9,10 @@ const SignUp = () => {
     const [password , setPassword] = useState('')
     const [confpassword , setconfPassword] = useState('')
     const [email , setEmail] = useState('')
+    const api  = useStore((state)=> state.apiendpoint)
 
     const signUp = () =>{
-        axios.post("https://bubble-backend-nine.vercel.app/signup" , {username , password , email}).then((result)=>{
+        axios.post(`${api}/signup` , {username , password , email}).then((result)=>{
             navigate('/login')
         })
     }

@@ -10,6 +10,7 @@ import ChooseService from './Components/ChooseService';
 import LoginForm from './Components/LoginForm';
 import UsernameLogin from './Components/UsernameLogin';
 import SignUp from './Components/SignUp';
+import FinalBook from './Components/finalBook';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path='chooseservice' element = {<ChooseService/>} />
         <Route path='/login' element = {<UsernameLogin/>}/>
         <Route path='/signup' element = {<SignUp/>}/>
+        <Route path='/book' element = {<FinalBook/>}/>
       </Routes>
     </div>
   );
