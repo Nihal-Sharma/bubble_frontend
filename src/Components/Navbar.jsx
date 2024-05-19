@@ -1,74 +1,112 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import Drawer from "react-modern-drawer";
+import "react-modern-drawer/dist/index.css";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { IconContext } from "react-icons";
 const Navbar = () => {
-  const [showAlert, setShowAlert] = useState(false);
-  const navigate = useNavigate()
+  // const [navstyle , setNavstyle] = useState(window.innerWidth)
 
- 
-  
-    const handleButtonClick = () => {
-      setShowAlert(true);
-    };
-  
-    const logout = () => {
-      setShowAlert(false);
-      localStorage.setItem("LOGGEDIN" ,'false')
-      navigate('/')
-    };
+  const [isOpen, setIsopen] = useState(false);
+  const toggleDrawer = () => {
+    setIsopen(!isOpen);
+  };
 
-    const cancel = () =>{
-      setShowAlert(false);
-    }
-
-  return (
-    <div className="navbar">
-      <div style={{ margin: "20px"  }}>
-        {" "}
-        <Link to={"/"}>Home</Link>
-      </div>
-      <div style={{ margin: "20px" }}>
-        {" "}
-        <Link to={"/Services"}>Services</Link>
-      </div>
-      <div style={{ margin: "20px" }}>
-        {" "}
-        <Link to={"/AboutUs"}>About Us</Link>
-      </div>
-      <div style={{ margin: "20px" }}>
-        {" "}
-        <Link to={"/ContactUs"}>Contact Us</Link>
-      </div>
-      <div
-        style={{
-          margin: "20px",
-          backgroundColor: "grey",
-          color: "white",
-          paddingLeft: "9px",
-          paddingRight: "9px",
-          paddingTop: "5px",
-          paddingBottom: "5px",
-          borderRadius: "10px",
-          width :'60px',
-          textAlign :'center'
-         
-        }}
-        onClick={logout}
-      >
-        Log Out
-      </div>
-      <div>
-      
-      {showAlert && (
-        <div className="alert-box">
-          <p>This is an alert box.</p>
-          <button onClick={logout}>Log Out</button>
-          <button onClick={cancel}>Cancel</button>
+  const navstyle = window.innerWidth;
+  const handleLogin = () => {
+    alert(navstyle);
+  };
+  if (navstyle >= 700) {
+    return (
+      <div className="main-navbar">
+        <div className="logo-navbar"></div>
+        <div className="routes-navbar">
+          <NavLink className="links" to="/">
+            Home
+          </NavLink>
+          <NavLink className="links" to="/services">
+            Services
+          </NavLink>
+          <NavLink className="links" to="/offers">
+            Offers
+          </NavLink>
+          <NavLink className="links" to="/ContactUs">
+            Contact
+          </NavLink>
+          <NavLink className="links" to="/complain">
+            Complain
+          </NavLink>
         </div>
-      )}
-    </div>
-    </div>
-  );
+        <div className="login-signup-navbar">
+          <div className="login-but-navbar" onClick={handleLogin}>
+            Login
+          </div>
+          <div className="signup-but-navbar">Signup</div>
+        </div>
+      </div>
+    );
+  } else {
+    return (
+      <div>
+        <div className="main-navbar2">
+          <div onClick={toggleDrawer} className="show-drawer">
+            <IconContext.Provider
+              value={{
+                color: "#E6484B",
+                className: "global-class-name",
+                size: "30px",
+              }}
+            >
+              <div>
+                <GiHamburgerMenu />
+              </div>
+            </IconContext.Provider>
+          </div>
+          <div className="logo-navbar"></div>
+
+          {/* <div className="routes-navbar">
+             <NavLink className= 'links' to='/'>Home</NavLink>
+             <NavLink className= 'links' to='/services' >Services</NavLink>
+             <NavLink className= 'links' to = '/offers' >Offers</NavLink>
+             <NavLink className= 'links' to = '/ContactUs'>Contact</NavLink>
+             <NavLink className= 'links' to = '/complain' >Complain</NavLink>
+           </div> */}
+          <div className="login-signup-navbar">
+            <div className="login-but-navbar" onClick={handleLogin}>
+              Login
+            </div>
+          </div>
+        </div>
+
+        <Drawer
+          open={isOpen}
+          onClose={toggleDrawer}
+          direction="left"
+          className="bla bla bla"
+        >
+          <div className="routes-navbar-burger">
+            <div className="logo-navbar"></div>
+            <NavLink className="links-burger" to="/">
+              Home
+            </NavLink>
+            <NavLink className="links-burger" to="/services">
+              Services
+            </NavLink>
+            <NavLink className="links-burger" to="/offers">
+              Offers
+            </NavLink>
+            <NavLink className="links-burger" to="/ContactUs">
+              Contact
+            </NavLink>
+            <NavLink className="links-burger" to="/complain">
+              Complain
+            </NavLink>
+          </div>
+        </Drawer>
+      </div>
+    );
+  }
 };
 
 export default Navbar;

@@ -20,11 +20,11 @@ function App() {
         <Route path='/' element ={<Home/>} />
         <Route path='/Services' element ={<Services/>} />
         <Route path='/ContactUs' element ={<ContactUs/>} />
-        <Route path='/AboutUs' element ={<AboutUs/>} />
-        <Route path='chooseservice' element = {<ChooseService/>} />
+        <Route path='/offers' element ={<AboutUs/>} />
+        <Route path='/complain' element = {<ChooseService/>} />
         <Route path='/login' element = {<UsernameLogin/>}/>
         <Route path='/signup' element = {<SignUp/>}/>
-        <Route path='/book' element = {<FinalBook/>}/>
+        {/* <Route path='/book' element = {<FinalBook/>}/> */}
       </Routes>
     </div>
   );
