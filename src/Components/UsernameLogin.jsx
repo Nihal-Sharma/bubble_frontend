@@ -22,7 +22,8 @@ const UsernameLogin = () => {
         else{
           alert("Login successfull")
           localStorage.setItem("LOGGEDIN" ,"true")
-          navigate("/chooseservice")
+          localStorage.setItem("USERNAME" ,result.data.username )
+          navigate("/")
 
         }
       })
@@ -34,42 +35,17 @@ const UsernameLogin = () => {
     }
 
   return (
-    <div className="gg">
-       
-      <div className="mainbox">
-        <input
-          placeholder="Username"
-          style={{
-            height: "3vh",
-            fontSize: "2vh",
-            padding: "10px",
-            borderRadius: "10px",
-            width :'100%'
-          }}
-          onChange={(e)=>{setUsername(e.target.value)}}
-        ></input>
-      </div>
-      <div className="mainbox">
-        <input
-          placeholder="password"
-          type="password"
-          style={{
-            height: "3vh",
-            fontSize: "2vh",
-            padding: "10px",
-            borderRadius: "10px",
-            width :'100%'
-          }}
-          onChange={(e)=>{setPassword(e.target.value)}}
-        ></input>
-
-      </div>
-      <div  className="mainbox heightt" onClick={Login} >
-      <text className="login-but">Login</text></div>
-      <div  className="mainbox heightt1" onClick={NewAcc} >
-        <text>Create Account</text>
-      </div>
+   <div className="main-login">
+    <div className="login-box">
+    <div className="logo-navbar1"></div>
+    <div className="input-login">
+      <div className="login-input-div"><input placeholder="Username" className="input-log" onChange={(e)=>{setUsername(e.target.value)}} /></div>
+      <div  className="login-input-div"><input placeholder="Password" type="password" className="input-log" onChange={(e)=>{setPassword(e.target.value)}} /></div>
+    <div className="login-button" onClick={Login} >Login</div>
+    <div className="login-button1" onClick={()=>{navigate('/signup')}} >New here? Signup</div>
     </div>
+    </div>
+   </div>
   );
 };
 

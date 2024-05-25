@@ -19,73 +19,18 @@ const SignUp = () => {
 
     
   return (
-    <div className="gg">
-       
-    <div className="mainbox">
-      <input
-        placeholder="Username"
-        style={{
-          height: "3vh",
-          fontSize: "2vh",
-          padding: "10px",
-          borderRadius: "10px",
-          width :'100%'
-        }}
-        onChange={(e)=>{setUsername(e.target.value)}}
-      ></input>
+    <div className="main-login">
+    <div className="login-box">
+    <div className="logo-navbar1"></div>
+    <div className="input-login">
+      <div className="login-input-div"><input placeholder="Username" className="input-log" onChange={(e)=>{setUsername(e.target.value)}} /></div>
+      <div  className="login-input-div"><input placeholder="Password" type="password" className="input-log" onChange={(e)=>{setPassword(e.target.value)}} /></div>
+      <div className="login-input-div"><input placeholder="Email" className="input-log" onChange={(e)=>{setEmail(e.target.value)}} /></div>
+    <div className="login-button" onClick={signUp} >Create Account</div>
+    <div className="login-button1" onClick={()=>{navigate('/login')}} >Go Back </div>
     </div>
-    <div className="mainbox">
-      <input
-        placeholder="password"
-        type="password"
-        style={{
-          height: "3vh",
-          fontSize: "2vh",
-          padding: "10px",
-          borderRadius: "10px",
-          width :'100%'
-        }}
-        onChange={(e)=>{setPassword(e.target.value)}}
-      ></input>
-
     </div>
-
-    <div className="mainbox">
-      <input
-        placeholder="Confirm Password"
-        type="password"
-        style={{
-          height: "3vh",
-          fontSize: "2vh",
-          padding: "10px",
-          borderRadius: "10px",
-          width :'100%'
-        }}
-        onChange={(e)=>{setconfPassword(e.target.value)}}
-      ></input>
-
-    </div>
-    <div className="mainbox">
-      <input
-        placeholder="Email"
-        type="mail"
-        style={{
-          height: "3vh",
-          fontSize: "2vh",
-          padding: "10px",
-          borderRadius: "10px",
-          width :'100%'
-        }}
-        onChange={(e)=>{setEmail(e.target.value)}}
-      ></input>
-
-    </div>
-    <div div className="mainbox heightt" onClick={signUp} >
-    <text className="login-but">Create Account</text></div>
-    <div  className="mainbox heightt1" onClick={()=>{navigate('/login')}} >
-      <text>Go Back</text>
-    </div>
-  </div>
+   </div>
   )
 }
 

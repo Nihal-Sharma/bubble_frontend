@@ -6,6 +6,8 @@ import "react-modern-drawer/dist/index.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IconContext } from "react-icons";
 const Navbar = () => {
+  const username = localStorage.getItem("USERNAME")
+  const navigate = useNavigate()
   // const [navstyle , setNavstyle] = useState(window.innerWidth)
 
   const [isOpen, setIsopen] = useState(false);
@@ -15,8 +17,17 @@ const Navbar = () => {
 
   const navstyle = window.innerWidth;
   const handleLogin = () => {
-    alert(navstyle);
+    
+    navigate('/login')
+    
   };
+
+  const logOut = () =>{
+    alert('Logged Out')
+    navigate('/')
+    localStorage.removeItem("USERNAME")
+    localStorage.removeItem("LOGGEDIN")
+  }
   if (navstyle >= 700) {
     return (
       <div className="main-navbar">
@@ -39,10 +50,13 @@ const Navbar = () => {
           </NavLink>
         </div>
         <div className="login-signup-navbar">
-          <div className="login-but-navbar" onClick={handleLogin}>
+         { username && <div className="login-but-navbar" onClick={logOut}>
+            Logout
+          </div>}
+          { ! username && <div className="login-but-navbar" onClick={handleLogin}>
             Login
-          </div>
-          <div className="signup-but-navbar">Signup</div>
+          </div>}
+          <div className="signup-but-navbar" onClick={()=>{navigate("/signup")}} >Signup</div>
         </div>
       </div>
     );
@@ -73,9 +87,13 @@ const Navbar = () => {
              <NavLink className= 'links' to = '/complain' >Complain</NavLink>
            </div> */}
           <div className="login-signup-navbar">
-            <div className="login-but-navbar" onClick={handleLogin}>
+           { ! username && <div className="login-but-navbar" onClick={handleLogin}>
               Login
-            </div>
+            </div>}
+            
+           {  username &&  <div className="login-but-navbar" onClick={logOut}>
+              Logout
+            </div>}
           </div>
         </div>
 
