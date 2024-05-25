@@ -1,16 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.6e71a781.css",
-    "main.js": "/static/js/main.13deae13.js",
+    "main.css": "/static/css/main.c80b927c.css",
+    "main.js": "/static/js/main.c637115e.js",
     "static/js/453.2bdb0b3b.chunk.js": "/static/js/453.2bdb0b3b.chunk.js",
+    "static/media/car-logo-home.png": "/static/media/car-logo-home.30e3b378eb3549c48d50.png",
+    "static/media/reviews.png": "/static/media/reviews.fe79d5d9794e50f1e4bd.png",
+    "static/media/logo-bubbles.png": "/static/media/logo-bubbles.dee4dc97d0addd2264b7.png",
     "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/index.html",
-    "main.6e71a781.css.map": "/static/css/main.6e71a781.css.map",
-    "main.13deae13.js.map": "/static/js/main.13deae13.js.map",
+    "main.c80b927c.css.map": "/static/css/main.c80b927c.css.map",
+    "main.c637115e.js.map": "/static/js/main.c637115e.js.map",
     "453.2bdb0b3b.chunk.js.map": "/static/js/453.2bdb0b3b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6e71a781.css",
-    "static/js/main.13deae13.js"
+    "static/css/main.c80b927c.css",
+    "static/js/main.c637115e.js"
   ]
 }
