@@ -256,7 +256,7 @@
         padding: 15px 15px 0px 15px ;
     }
     @media(max-width: 428px){
-        flex-direction:column-reverse;
+        flex-direction: column-reverse;
          align-items: center;
     }
 }
