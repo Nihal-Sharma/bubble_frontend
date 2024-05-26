@@ -1,7 +1,7 @@
 import { create } from "zustand";
 
 const loggedcheck = () =>{
-    const checklog = localStorage.getItem('LOGGEDIN')
+    const checklog = localStorage.getItem('LOGGEDIN') || false
     return checklog
 }
 

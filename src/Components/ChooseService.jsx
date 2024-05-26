@@ -4,41 +4,54 @@ import { useNavigate } from "react-router-dom";
 const ChooseService = () => {
   const navigate = useNavigate()
 
-  const bookService = () =>{
-    navigate('/book')
-  }
-
+ 
   return (
-    // <div style={{width :'100vw'}}>
-    //   <div style={{ textAlign: "center", fontSize: "5vh" }}>Our Services</div>
-    //   <div className="test-block">
-    //     <div className="service-tab">
-    //       <div style={{ display: "flex", flexDirection: "column" , marginBottom :'100px'}}>
-    //         <text className="main-heading">Service 1</text>
-    //         <text className="desc-heading" >This is Service 1</text>
-    //       </div>
-    //       <div className="book-but" onClick={bookService}>Book</div>
-    //     </div>
-    //     <div className="service-tab">
-    //       <div style={{ display: "flex", flexDirection: "column" , marginBottom :'100px' }}>
-    //         <text className="main-heading">Service 2</text>
-    //         <text className="desc-heading">
-    //           This is Service 2 , known for its best and cleanliness , provided
-    //           at right time and right place
-    //         </text>
-    //       </div>
-    //       <div className="book-but" onClick={bookService}>Book</div>
-    //     </div>
-    //     <div className="service-tab">
-    //       <div style={{ display: "flex", flexDirection: "column"  , marginBottom :'100px'}}>
-    //         <text className="main-heading" >Service 3</text>
-    //         <text className="desc-heading">This is Service 3</text>
-    //       </div>
-    //       <div className="book-but" onClick={bookService}>Book</div>
-    //     </div>
-    //   </div>
-    // </div>
-    <></>
+    <div className="main-chooseService">
+      <div className="grey-service">
+      <div className="heading-chooseserv">Choose a <span className="service-head-txt"> Service</span></div>
+      <div className="show-service-tabs">
+        <div className="service-tab">
+          <div>
+
+          <div className="service-name">Standard</div>
+          <div className="includes">Includes :</div>
+          <div className="list">
+            <li>
+              Vaccum Cleaning
+            </li>
+            <li>
+              Pressure Washing
+            </li>
+            <li>Polishing (Both Internal and External)</li>
+            <li>Washing Completed within 4 Hours of booking</li>
+          </div>
+          
+          </div>
+          <div className="gg" > <div className="book-but-serv" onClick={()=>{alert(' Standard service Booked')}}  >Book Rs 300</div></div>
+        </div>
+        <div className="service-tab">
+          <div>
+
+          <div className="service-name">Premium</div>
+          <div className="includes">Includes :</div>
+          <div className="list">
+            <li>
+              Vaccum Cleaning
+            </li>
+            <li>
+              Pressure Washing
+            </li>
+            <li>Polishing (Both Internal and External)</li>
+            <li>Washing Completed within 2 Hours of booking</li>
+          </div>
+          
+          </div>
+          <div className="gg" > <div className="book-but-serv" onClick={()=>{alert(' Premium service Booked')}}    >Book Rs 400</div></div>
+        </div>
+      </div>
+      </div>
+    </div>
+    
   );
 };
 

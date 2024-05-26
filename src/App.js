@@ -11,6 +11,7 @@ import LoginForm from './Components/LoginForm';
 import UsernameLogin from './Components/UsernameLogin';
 import SignUp from './Components/SignUp';
 import FinalBook from './Components/finalBook';
+import Complain from './Navbar_Comp/Complain';
 
 function App() {
   return (
@@ -21,9 +22,10 @@ function App() {
         <Route path='/Services' element ={<Services/>} />
         <Route path='/ContactUs' element ={<ContactUs/>} />
         <Route path='/offers' element ={<AboutUs/>} />
-        <Route path='/complain' element = {<ChooseService/>} />
+        <Route path='/complain' element = {<Complain/>} />
         <Route path='/login' element = {<UsernameLogin/>}/>
         <Route path='/signup' element = {<SignUp/>}/>
+        <Route path='/chooseservice' element = {<ChooseService/>}/>
         {/* <Route path='/book' element = {<FinalBook/>}/> */}
       </Routes>
     </div>

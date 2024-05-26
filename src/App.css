@@ -184,6 +184,22 @@
 }
 .but-book-top-home{
     background-color: #E6484B;
+    box-shadow: 3px 3px 2px #a7a2a2;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-top: 10vh;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+     -moz-user-select: none;
+     -ms-user-select: none;
+     user-select: none;
+}
+.but-book-top-home:hover{
+    background-color: #005B96;
+    box-shadow: 3px 3px 2px #a7a2a2;
     padding: 10px;
     color: white;
     border-radius: 5px;
@@ -364,4 +380,103 @@
     font-size: 16px;
     color: rgb(220, 220, 220);
     border-radius: 10px;
+}
+.heading-chooseserv{
+    font-size: 28px;
+    text-align: center;
+    margin-top: 10px;
+
+    @media(max-width: 428px){
+        font-size: 22px;
+    }
+}
+.service-head-txt{
+    font-weight: bold;
+    color: #E6484B;
+
+}
+.grey-service{
+    background-color: #d7d7d7;
+    padding: 10px;
+}
+.main-chooseService{
+    padding: 2vw;
+    
+    @media(max-width: 428px){
+        padding: 3vw;
+    }
+}
+.grey-service{
+    border-radius: 8px;
+    padding-top: 8px;
+
+}
+.service-tab{
+    background-color: #005B96;
+    border-radius: 10px;
+    padding: 10px;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media(max-width: 428px){
+        height: 23vh;
+    }
+    margin-top: 20px;
+}
+.show-service-tabs{
+    display: flex;
+    justify-content: space-around;
+    @media(max-width: 428px){
+        flex-direction: column;
+    }
+}
+.service-name{
+    font-size: 22px;
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+    
+}
+.includes{
+    font-size: 18px;
+    color: white;
+}
+.list{
+    color: white;
+    font-size: 15px;
+
+    @media(max-width: 428px){
+        font-size: 12px;
+    }
+
+}
+.book-but-serv{
+    background-color: #E6484B;
+    padding: 8px;
+    width: 50%;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 8px;
+    border-radius: 7px;
+    box-shadow: 3px 3px 2px #aaaaaa;
+}
+.book-but-serv:hover{
+    background-color: #E6484B;
+    padding: 8px;
+    width: 50%;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 8px;
+    border-radius: 7px;
+    box-shadow: 0px 0px 0px #aaaaaa;
+}
+.gg{
+  
+    display: flex;
+    justify-content: center;
 }

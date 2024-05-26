@@ -5,10 +5,9 @@ import { useStore } from "../Store/Store";
 import carlogo from '../Assets/car-logo-home.png'
 const Home = () => {
   const navigate = useNavigate();
-  const checklogin = useStore((state) => state.loggedin);
-
+  const logged = localStorage.getItem("LOGGEDIN")
   const BookButton = () => {
-    if (checklogin == "true") {
+    if (logged == "true") {
       navigate("/chooseservice");
     } else {
       navigate("/login");
@@ -24,7 +23,7 @@ const Home = () => {
         <div className="subhead-home">
           We believe “A clean car leads to a clean ride.
         </div>
-        <div className="but-book-top-home">Book a Wash</div>
+        <div className="but-book-top-home" onClick={BookButton} >Book a Wash</div>
         <div className="short-top-home">
           Book today and get a 2 wheeler wash free with a regular car wash
         </div>
