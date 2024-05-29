@@ -499,13 +499,21 @@
     padding-top: 1vw;
     padding-bottom: 8vh;
     align-items: center;
-    border-radius: 10px;   
+    border-radius: 10px;  
+    
+    @media(max-width: 720px){
+        width: 80%;
+    }
+    
      
 }
 .txt-head-final{
     text-align: center;
     font-size: 28px;
     /* margin-bottom: 20px; */
+    @media(max-width: 404px){
+     font-size: 20px;   
+    }
 }
 .input-finalb{
     width: 90%;
@@ -513,6 +521,11 @@
     margin-top: 10px;
     border: none;
     border-radius: 8px;
+
+    @media(max-width: 340px){
+        width: 80%;
+        padding: 5px;
+    }
 }
 
 .inputs-final{
