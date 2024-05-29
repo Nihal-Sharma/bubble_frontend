@@ -14,8 +14,12 @@ const FinalBook = () => {
     const onBook = () =>{
         
         axios.post(`${api}/bookservice`, { username : localStorage.getItem("USERNAME") , address , date ,time ,phone, type : typ.name ,status :'pending'}).then((result)=>{
-            console.log(result)
-            alert("Booked")
+            
+            alert("Thanks for Booking , You will recieve a confirmation call shortly")
+            seDate('')
+            seTime('')
+            setAddress('')
+            setPhone('')
         })
     }
 
@@ -31,10 +35,12 @@ const FinalBook = () => {
       <div className="info-box">
         <div className='txt-head-final'>Kindly Fill in the <span className='txt-final'>Details</span></div>
         <div className='inputs-final'>
-      <input placeholder='Address' onChange={(e)=>{setAddress(e.target.value)}} required className='input-finalb'  ></input>
-      <input type='number' placeholder='Phone Number' className='input-finalb' onChange={(e)=>{setPhone(e.target.value)}} />
-      <input type='date' onChange={(e)=>{seDate(e.target.value)}} required className='input-finalb'/>
-      <input type='time' onChange={(e)=>{seTime(e.target.value)}} required className='input-finalb'/>
+      <input placeholder='Address' onChange={(e)=>{setAddress(e.target.value)}} required className='input-finalb' value={address} ></input>
+      <input type='number' placeholder='Phone Number' className='input-finalb' onChange={(e)=>{setPhone(e.target.value)}}  value={phone} />
+      <text>Date :</text>
+      <input type='date' onChange={(e)=>{seDate(e.target.value)}} required className='input-finalb' value={date} />
+      <text>Time :</text>
+      <input type='time' onChange={(e)=>{seTime(e.target.value)}} required className='input-finalb' value={time} />
       </div>
       <div className="final-book" onClick={onBook} >Book</div>
       </div>
