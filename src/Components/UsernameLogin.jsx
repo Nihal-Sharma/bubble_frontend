@@ -23,6 +23,7 @@ const UsernameLogin = () => {
           alert("Login successfull")
           localStorage.setItem("LOGGEDIN" ,"true")
           localStorage.setItem("USERNAME" ,result.data.username )
+          localStorage.setItem("TYPE" , result.data.type )
           navigate("/")
 
         }

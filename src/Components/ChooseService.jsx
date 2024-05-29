@@ -27,7 +27,7 @@ const ChooseService = () => {
           </div>
           
           </div>
-          <div className="gg" > <div className="book-but-serv" onClick={()=>{alert(' Standard service Booked')}}  >Book Rs 300</div></div>
+          <div className="gg" > <div className="book-but-serv" onClick={()=>{navigate(`/finalbook/${'standard'}`)}}  >Book Rs 300</div></div>
         </div>
         <div className="service-tab">
           <div>
@@ -46,7 +46,7 @@ const ChooseService = () => {
           </div>
           
           </div>
-          <div className="gg" > <div className="book-but-serv" onClick={()=>{alert(' Premium service Booked')}}    >Book Rs 400</div></div>
+          <div className="gg" > <div className="book-but-serv" onClick={()=>{navigate(`/finalbook/${'premium'}`)}} >Book Rs 400</div></div>
         </div>
       </div>
       </div>

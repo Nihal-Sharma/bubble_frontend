@@ -12,6 +12,7 @@ import UsernameLogin from './Components/UsernameLogin';
 import SignUp from './Components/SignUp';
 import FinalBook from './Components/finalBook';
 import Complain from './Navbar_Comp/Complain';
+import Orders from './Navbar_Comp/Orders';
 
 function App() {
   return (
@@ -26,7 +27,8 @@ function App() {
         <Route path='/login' element = {<UsernameLogin/>}/>
         <Route path='/signup' element = {<SignUp/>}/>
         <Route path='/chooseservice' element = {<ChooseService/>}/>
-        {/* <Route path='/book' element = {<FinalBook/>}/> */}
+        <Route path='/finalbook/:name' element = {<FinalBook/>}/>
+        <Route path='/orders' element = {<Orders/>} />
       </Routes>
     </div>
   );

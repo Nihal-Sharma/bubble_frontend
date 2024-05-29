@@ -8,6 +8,7 @@ import { IconContext } from "react-icons";
 const Navbar = () => {
   const username = localStorage.getItem("USERNAME")
   const navigate = useNavigate()
+  const type = localStorage.getItem("TYPE")
   // const [navstyle , setNavstyle] = useState(window.innerWidth)
 
   const [isOpen, setIsopen] = useState(false);
@@ -27,8 +28,9 @@ const Navbar = () => {
     navigate('/')
     localStorage.removeItem("USERNAME")
     localStorage.removeItem("LOGGEDIN")
+    localStorage.removeItem("TYPE")
   }
-  if (navstyle >= 700) {
+  if (navstyle >= 845) {
     return (
       <div className="main-navbar">
         <div className="logo-navbar"></div>
@@ -48,6 +50,9 @@ const Navbar = () => {
           <NavLink className="links" to="/complain">
             Complain
           </NavLink>
+          {type == 'God' ? <NavLink className="links" to="/orders">
+            Orders
+          </NavLink> :<></> }
         </div>
         <div className="login-signup-navbar">
          { username && <div className="login-but-navbar" onClick={logOut}>
@@ -120,6 +125,9 @@ const Navbar = () => {
             <NavLink className="links-burger" to="/complain">
               Complain
             </NavLink>
+            {type == 'God' ? <NavLink className="links-burger" to="/orders">
+            Orders
+          </NavLink> :<></> }
           </div>
         </Drawer>
       </div>
